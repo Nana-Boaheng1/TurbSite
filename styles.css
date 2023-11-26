@@ -1,0 +1,89 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('Images/wallpaper.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px; /* Increased padding for better visual effect */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for better readability */
+    -webkit-backdrop-filter: blur(5px); /* Standard syntax */
+    backdrop-filter: blur(5px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+.container img {
+    max-width: 50%; /* Ensure images do not exceed their natural size */
+    height: auto; /* Maintain aspect ratio of images */
+    margin-bottom: 20px; /* Add space between images and content */
+    border-radius: 50%;
+}
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.navbar ul {
+    list-style: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navbar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+    color: #ff9900;
+}
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff9900;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar ul li a:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+
+
+
+@media (max-width: 768px) {
+    .navbar ul li {
+        margin-right: 10px;
+    }
+}
